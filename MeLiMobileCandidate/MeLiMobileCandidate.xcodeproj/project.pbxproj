@@ -10,12 +10,13 @@
 		91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639D2C63BD560094A162 /* AppDelegate.swift */; };
 		91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639F2C63BD560094A162 /* SceneDelegate.swift */; };
 		91DC63A22C63BD560094A162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63A12C63BD560094A162 /* ViewController.swift */; };
-		91DC63A52C63BD560094A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A32C63BD560094A162 /* Main.storyboard */; };
 		91DC63A72C63BD570094A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A62C63BD570094A162 /* Assets.xcassets */; };
 		91DC63AA2C63BD570094A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */; };
 		91DC63B52C63BD570094A162 /* MeLiMobileCandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63B42C63BD570094A162 /* MeLiMobileCandidateTests.swift */; };
 		91DC63BF2C63BD570094A162 /* MeLiMobileCandidateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63BE2C63BD570094A162 /* MeLiMobileCandidateUITests.swift */; };
 		91DC63C12C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */; };
+		91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D42C63C1620094A162 /* SearchViewController.swift */; };
+		91DC63D72C63C6F10094A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63D62C63C6F10094A162 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		91DC639D2C63BD560094A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DC639F2C63BD560094A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		91DC63A12C63BD560094A162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91DC63A42C63BD560094A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DC63A62C63BD570094A162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DC63A92C63BD570094A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91DC63AB2C63BD570094A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		91DC63BA2C63BD570094A162 /* MeLiMobileCandidateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeLiMobileCandidateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DC63BE2C63BD570094A162 /* MeLiMobileCandidateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateUITests.swift; sourceTree = "<group>"; };
 		91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91DC63D42C63C1620094A162 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		91DC63D62C63C6F10094A162 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,8 @@
 				91DC63CD2C63C00B0094A162 /* Models */,
 				91DC639D2C63BD560094A162 /* AppDelegate.swift */,
 				91DC639F2C63BD560094A162 /* SceneDelegate.swift */,
+				91DC63D62C63C6F10094A162 /* Main.storyboard */,
 				91DC63A12C63BD560094A162 /* ViewController.swift */,
-				91DC63A32C63BD560094A162 /* Main.storyboard */,
 				91DC63A62C63BD570094A162 /* Assets.xcassets */,
 				91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */,
 				91DC63AB2C63BD570094A162 /* Info.plist */,
@@ -148,6 +150,7 @@
 		91DC63CF2C63C01A0094A162 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63D42C63C1620094A162 /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,9 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DC63D72C63C6F10094A162 /* Main.storyboard in Resources */,
 				91DC63AA2C63BD570094A162 /* LaunchScreen.storyboard in Resources */,
 				91DC63A72C63BD570094A162 /* Assets.xcassets in Resources */,
-				91DC63A52C63BD560094A162 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +295,7 @@
 			files = (
 				91DC63A22C63BD560094A162 /* ViewController.swift in Sources */,
 				91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */,
+				91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */,
 				91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91DC63A32C63BD560094A162 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91DC63A42C63BD560094A162 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
