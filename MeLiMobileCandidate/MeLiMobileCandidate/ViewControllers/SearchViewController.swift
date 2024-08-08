@@ -20,7 +20,8 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     
     private func setupUI(){
         title = "Buscar productos"
-        view.backgroundColor = .white
+        view.backgroundColor = .MeLiYellow
+        
         setupSearchbar()
         setupTableView()
     }
@@ -28,6 +29,8 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     private func setupSearchbar(){
         searchBar.delegate = self
         searchBar.placeholder = "Buscar productos"
+        searchBar.backgroundColor = UIColor.MeLiYellow
+        searchBar.barTintColor = UIColor.MeLiYellow
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchBar)
         NSLayoutConstraint.activate([
@@ -38,9 +41,10 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     }
     
     private func setupTableView(){
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SearchResultItemTableViewCell.self, forCellReuseIdentifier: "SearchResultItemCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -51,38 +55,40 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
         ])
     }
     
-// MARK: UISearchBarDelegate
-
+    // MARK: UISearchBarDelegate
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
         fetchData(for: searchTerm)
     }
     
     private func fetchData(for searchTerm: String) {
-            NetworkManager.shared.fetchData(for: searchTerm) { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let products):
-                        self?.products = products
-                        self?.tableView.reloadData()
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
+        NetworkManager.shared.fetchData(for: searchTerm) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let products):
+                    self?.products = products
+                    self?.tableView.reloadData()
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
         }
+    }
     
-// MARK: UITableViewDataSource
+    // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-                let product = products[indexPath.row]
-                cell.textLabel?.text = product.title
-                return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultItemCell", for: indexPath) as? SearchResultItemTableViewCell else {
+            return UITableViewCell()
+        }
+        let item = products[indexPath.row]
+        cell.configure(with: item)
+        return cell
     }
 }
 
