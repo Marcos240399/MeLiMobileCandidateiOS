@@ -192,12 +192,12 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     
     private func configureViewWithProduct() {
         titleLabel.text = product.title
-        priceLabel.text = "$" + RemoveTrailingZeroes(from: product.price)
+        priceLabel.text = "$" + MathUtils.RemoveTrailingZeroes(from: product.price)
         mercadoPagoLabel.text = "Disponible"
         mercadoPagoIcon.image = UIImage(named: "MercadoPagoIcon")
         stockLabel.text = String(product.availableQuantity) + " en stock"
-        let installmentQuantityText = RemoveTrailingZeroes(from: product.installmentQuantity)
-        let installmentAmountText = "$" + RemoveTrailingZeroes(from: product.installmentAmount)
+        let installmentQuantityText = MathUtils.RemoveTrailingZeroes(from: product.installmentQuantity)
+        let installmentAmountText = "$" + MathUtils.RemoveTrailingZeroes(from: product.installmentAmount)
         installmentsLabel.text = "en " + installmentQuantityText + "x " + installmentAmountText
         if product.installmentRate == 0 { installmentsLabel.text! += " sin intereses!" }
         installmentsLabel.textColor = .InstallmentGreen
@@ -236,21 +236,6 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func RemoveTrailingZeroes(from number: Double) -> String{
-        var stringifiedInput = String(format: "%.2f", number)
-        if((stringifiedInput.contains(where: { Character in
-            Character == "."
-        }))){
-            let split = stringifiedInput.components(separatedBy: ".")
-            if(split[1].allSatisfy({ Character in
-                Character == "0"
-            })){
-                stringifiedInput = split[0]
-            }
-        }
-        return stringifiedInput
     }
 }
 
