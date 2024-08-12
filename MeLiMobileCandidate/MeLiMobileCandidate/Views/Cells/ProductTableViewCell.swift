@@ -10,7 +10,7 @@ import UIKit
 
 class ProductTableViewCell : UITableViewCell {
     
-    private let thumbnailImageView: UIImageView = {
+    internal let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -18,7 +18,7 @@ class ProductTableViewCell : UITableViewCell {
         return imageView
     }()
     
-    private let titleLabel: UILabel = {
+    internal let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.numberOfLines = 0
@@ -26,7 +26,7 @@ class ProductTableViewCell : UITableViewCell {
         return label
     }()
     
-    private let priceLabel: UILabel = {
+    internal let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.textColor = .darkGray
@@ -62,20 +62,9 @@ class ProductTableViewCell : UITableViewCell {
         ])
     }
     
-    // Configure the cell
     func configure(with item: Product) {
         titleLabel.text = item.title
-        priceLabel.text = String(format: "$%.2f", item.price)
-        if((priceLabel.text?.contains(where: { Character in
-            Character == "."
-        })) != nil){
-            let split = priceLabel.text!.components(separatedBy: ".")
-            if(split[1].allSatisfy({ Character in
-                Character == "0"
-            })){
-                priceLabel.text = split[0]
-            }
-        }
+        priceLabel.text = "$" + MathUtils.RemoveTrailingZeroes(from: item.price)
         thumbnailImageView.image = item.thumbnail
     }
 }

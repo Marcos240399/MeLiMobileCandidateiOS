@@ -7,12 +7,17 @@
 
 import Foundation
 class NetworkManager{
-    static let shared = NetworkManager()
+    static var shared = NetworkManager(session: .shared)
+    private let session: URLSession
+    
+    init(session: URLSession) {
+        self.session = session
+    }
     
     func fetchData(for searchTerm: String, completion: @escaping (Result<[Product], Error>) -> Void) {
         let urlString = "https://api.mercadolibre.com/sites/MLA/search?q=\(searchTerm)"
         guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return

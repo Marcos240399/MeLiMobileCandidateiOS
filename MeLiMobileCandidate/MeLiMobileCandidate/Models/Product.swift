@@ -10,15 +10,15 @@ import UIKit
 class Product {
     var id: String
     var title: String
-    var price: Float
+    var price: Double
     var thumbnail: UIImage?
     var availableQuantity: Int
     var acceptsMercadoPago: Bool
-    var installmentAmount: Float
-    var installmentRate: Float
-    var installmentQuantity: Int
+    var installmentAmount: Double
+    var installmentRate: Double
+    var installmentQuantity: Double
     
-    init(id: String, title: String, price: Float, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Float, installmentQuantity: Int, installmentRate: Float) {
+    init(id: String, title: String, price: Double, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Double, installmentQuantity: Double, installmentRate: Double) {
         self.id = id
         self.title = title
         self.price = price
@@ -33,16 +33,16 @@ class Product {
     convenience init?(json: [String: Any]) {
         guard let id = json["id"] as? String,
               let title = json["title"] as? String,
-              let price = json["price"] as? Float,
+              let price = json["price"] as? Double,
               let thumbnailURLString = json["thumbnail"] as? String,
               let thumbnailURL = URL(string: thumbnailURLString),
               let thumbnailData = try? Data(contentsOf: thumbnailURL),
               let availableQ = json["available_quantity"] as? Int,
               let mercadoPago = json["accepts_mercadopago"] as? Bool,
               let installment = json["installments"] as? [String: Any],
-              let installmentAmount = installment["amount"] as? Float,
-              let installmentRate = installment["rate"] as? Float,
-              let installmentQuantity = installment["quantity"] as? Int,
+              let installmentAmount = installment["amount"] as? Double,
+              let installmentRate = installment["rate"] as? Double,
+              let installmentQuantity = installment["quantity"] as? Double,
               let thumbnailImage = UIImage(data: thumbnailData)
         else {
             return nil
