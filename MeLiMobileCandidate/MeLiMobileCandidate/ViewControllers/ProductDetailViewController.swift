@@ -248,7 +248,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         fatalError("init(coder:) has not been implemented")
     }
     
-    func RemoveTrailingZeroes(from number: Float) -> String{
+    func RemoveTrailingZeroes(from number: Double) -> String{
         var stringifiedInput = String(format: "$%.2f", number)
         if((stringifiedInput.contains(where: { Character in
             Character == "."

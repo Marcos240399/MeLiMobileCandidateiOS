@@ -14,11 +14,11 @@ class Product {
     var thumbnail: UIImage?
     var availableQuantity: Int
     var acceptsMercadoPago: Bool
-    var installmentAmount: Float
-    var installmentRate: Float
+    var installmentAmount: Double
+    var installmentRate: Double
     var installmentQuantity: Int
     
-    init(id: String, title: String, price: Float, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Float, installmentQuantity: Int, installmentRate: Float) {
+    init(id: String, title: String, price: Float, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Double, installmentQuantity: Int, installmentRate: Double) {
         self.id = id
         self.title = title
         self.price = price
@@ -40,8 +40,8 @@ class Product {
               let availableQ = json["available_quantity"] as? Int,
               let mercadoPago = json["accepts_mercadopago"] as? Bool,
               let installment = json["installments"] as? [String: Any],
-              let installmentAmount = installment["amount"] as? Float,
-              let installmentRate = installment["rate"] as? Float,
+              let installmentAmount = installment["amount"] as? Double,
+              let installmentRate = installment["rate"] as? Double,
               let installmentQuantity = installment["quantity"] as? Int,
               let thumbnailImage = UIImage(data: thumbnailData)
         else {
