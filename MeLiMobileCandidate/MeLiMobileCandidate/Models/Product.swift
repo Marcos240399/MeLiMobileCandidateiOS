@@ -10,15 +10,15 @@ import UIKit
 class Product {
     var id: String
     var title: String
-    var price: Float
+    var price: Double
     var thumbnail: UIImage?
     var availableQuantity: Int
     var acceptsMercadoPago: Bool
     var installmentAmount: Double
     var installmentRate: Double
-    var installmentQuantity: Int
+    var installmentQuantity: Double
     
-    init(id: String, title: String, price: Float, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Double, installmentQuantity: Int, installmentRate: Double) {
+    init(id: String, title: String, price: Double, thumbnail: UIImage?, availableQuantity: Int, acceptsMercadoPago: Bool, installmentAmount: Double, installmentQuantity: Double, installmentRate: Double) {
         self.id = id
         self.title = title
         self.price = price
@@ -33,7 +33,7 @@ class Product {
     convenience init?(json: [String: Any]) {
         guard let id = json["id"] as? String,
               let title = json["title"] as? String,
-              let price = json["price"] as? Float,
+              let price = json["price"] as? Double,
               let thumbnailURLString = json["thumbnail"] as? String,
               let thumbnailURL = URL(string: thumbnailURLString),
               let thumbnailData = try? Data(contentsOf: thumbnailURL),
@@ -42,7 +42,7 @@ class Product {
               let installment = json["installments"] as? [String: Any],
               let installmentAmount = installment["amount"] as? Double,
               let installmentRate = installment["rate"] as? Double,
-              let installmentQuantity = installment["quantity"] as? Int,
+              let installmentQuantity = installment["quantity"] as? Double,
               let thumbnailImage = UIImage(data: thumbnailData)
         else {
             return nil

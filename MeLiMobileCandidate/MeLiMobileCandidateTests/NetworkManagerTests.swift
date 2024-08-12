@@ -20,7 +20,6 @@ class NetworkManagerTests: XCTestCase {
     }
     
     func testFetchData_Success() {
-        // Prepare mock response data
         let jsonString = """
                 {
                 "results":[
@@ -99,7 +98,6 @@ class NetworkManagerTests: XCTestCase {
 }
 
 
-// Mocking URLSession
 class URLSessionMock: URLSession {
     
     var data: Data?
