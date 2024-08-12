@@ -1,5 +1,5 @@
 //
-//  SearchResultItemTableViewCell.swift
+//  ProductTableViewCell.swift
 //  MeLiMobileCandidate
 //
 //  Created by Marcos Bazzano on 8/8/24.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SearchResultItemTableViewCell : UITableViewCell {
+class ProductTableViewCell : UITableViewCell {
     
     private let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,7 +63,7 @@ class SearchResultItemTableViewCell : UITableViewCell {
     }
     
     // Configure the cell
-    func configure(with item: SearchResultItem) {
+    func configure(with item: Product) {
         titleLabel.text = item.title
         priceLabel.text = String(format: "$%.2f", item.price)
         if((priceLabel.text?.contains(where: { Character in

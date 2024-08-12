@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		918A00D82C67CDAF00095268 /* ImageCarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */; };
+		918A00DB2C696D3F00095268 /* Installments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00DA2C696D3F00095268 /* Installments.swift */; };
 		91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639D2C63BD560094A162 /* AppDelegate.swift */; };
 		91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639F2C63BD560094A162 /* SceneDelegate.swift */; };
 		91DC63A22C63BD560094A162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63A12C63BD560094A162 /* ViewController.swift */; };
@@ -17,10 +19,11 @@
 		91DC63C12C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */; };
 		91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D42C63C1620094A162 /* SearchViewController.swift */; };
 		91DC63D72C63C6F10094A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63D62C63C6F10094A162 /* Main.storyboard */; };
-		91DC63D92C63E4700094A162 /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D82C63E4700094A162 /* SearchResultItem.swift */; };
+		91DC63D92C63E4700094A162 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D82C63E4700094A162 /* Product.swift */; };
 		91DC63DB2C63E7160094A162 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63DA2C63E7160094A162 /* NetworkManager.swift */; };
 		91DC63DE2C64FEEC0094A162 /* SearchResultItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63DD2C64FEEC0094A162 /* SearchResultItemTableViewCell.swift */; };
 		91DC63E12C6504EE0094A162 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63E02C6504EE0094A162 /* CustomColors.swift */; };
+		91DC63E32C6516040094A162 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63E22C6516040094A162 /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarrouselCell.swift; sourceTree = "<group>"; };
+		918A00DA2C696D3F00095268 /* Installments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installments.swift; sourceTree = "<group>"; };
 		91DC639A2C63BD560094A162 /* MeLiMobileCandidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeLiMobileCandidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DC639D2C63BD560094A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DC639F2C63BD560094A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +60,11 @@
 		91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		91DC63D42C63C1620094A162 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		91DC63D62C63C6F10094A162 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		91DC63D82C63E4700094A162 /* SearchResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
+		91DC63D82C63E4700094A162 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		91DC63DA2C63E7160094A162 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = MeLiMobileCandidate/Models/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
 		91DC63DD2C64FEEC0094A162 /* SearchResultItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItemTableViewCell.swift; sourceTree = "<group>"; };
 		91DC63E02C6504EE0094A162 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		91DC63E22C6516040094A162 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +151,8 @@
 		91DC63CD2C63C00B0094A162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91DC63D82C63E4700094A162 /* SearchResultItem.swift */,
+				91DC63D82C63E4700094A162 /* Product.swift */,
+				918A00DA2C696D3F00095268 /* Installments.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				91DC63D42C63C1620094A162 /* SearchViewController.swift */,
+				91DC63E22C6516040094A162 /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				91DC63DD2C64FEEC0094A162 /* SearchResultItemTableViewCell.swift */,
+				918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -323,11 +332,14 @@
 			files = (
 				91DC63DB2C63E7160094A162 /* NetworkManager.swift in Sources */,
 				91DC63A22C63BD560094A162 /* ViewController.swift in Sources */,
+				918A00DB2C696D3F00095268 /* Installments.swift in Sources */,
+				91DC63E32C6516040094A162 /* ProductDetailViewController.swift in Sources */,
 				91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */,
-				91DC63D92C63E4700094A162 /* SearchResultItem.swift in Sources */,
+				91DC63D92C63E4700094A162 /* Product.swift in Sources */,
 				91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */,
 				91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */,
 				91DC63DE2C64FEEC0094A162 /* SearchResultItemTableViewCell.swift in Sources */,
+				918A00D82C67CDAF00095268 /* ImageCarrouselCell.swift in Sources */,
 				91DC63E12C6504EE0094A162 /* CustomColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

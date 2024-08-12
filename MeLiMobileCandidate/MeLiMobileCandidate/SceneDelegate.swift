@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let searchViewController = SearchViewController()
         let navigationController = UINavigationController(rootViewController: searchViewController)
-        
+        navigationController.navigationBar.backgroundColor = .MeLiYellow
+        navigationController.navigationBar.tintColor = .black
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
