@@ -12,7 +12,16 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
-    private var products: [SearchResultItem] = []
+    private var products: [Product] = []
+    
+    private let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = .blue
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -24,6 +33,8 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
         
         setupSearchbar()
         setupTableView()
+        setupActivityIndicator()
+
     }
     
     private func setupSearchbar(){
@@ -44,7 +55,7 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
         tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(SearchResultItemTableViewCell.self, forCellReuseIdentifier: "SearchResultItemCell")
+        tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "ProductCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -55,25 +66,46 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
         ])
     }
     
+    private func setupActivityIndicator() {
+        view.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: tableView.centerYAnchor)
+        ])
+    }
+    
     // MARK: UISearchBarDelegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        products = []
+        tableView.reloadData()
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
         fetchData(for: searchTerm)
     }
     
     private func fetchData(for searchTerm: String) {
+        activityIndicator.startAnimating()
         NetworkManager.shared.fetchData(for: searchTerm) { [weak self] result in
             DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
                 switch result {
                 case .success(let products):
                     self?.products = products
+                    if products.isEmpty {
+                        self?.showAlertMessage(title: "Busqueda incorrecta", message: "No se encontraron resultados para la busqueda")
+                    }
                     self?.tableView.reloadData()
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedProduct = products[indexPath.row]
+        let detailVC = ProductDetailViewController(product: selectedProduct)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     // MARK: UITableViewDataSource
@@ -83,13 +115,25 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultItemCell", for: indexPath) as? SearchResultItemTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductTableViewCell else {
             return UITableViewCell()
         }
         let item = products[indexPath.row]
         cell.configure(with: item)
         return cell
     }
+    
 }
 
 
+extension UIViewController{
+    
+    public func showAlertMessage(title: String, message: String){
+        
+        let alertMessagePopUpBox = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        
+        alertMessagePopUpBox.addAction(okButton)
+        self.present(alertMessagePopUpBox, animated: true)
+    }
+}
