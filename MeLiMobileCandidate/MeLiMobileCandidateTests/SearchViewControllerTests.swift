@@ -54,8 +54,8 @@ class SearchViewControllerTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Completion handler called")
         
         mockNetworkManager.mockProducts = [
-            Product(id: "1", title: "Product 1", price: 10.0, thumbnail: nil, availableQuantity: 5, acceptsMercadoPago: true, installmentAmount: 5.0, installmentQuantity: 2, installmentRate: 0.0),
-            Product(id: "2", title: "Product 2", price: 20.0, thumbnail: nil, availableQuantity: 3, acceptsMercadoPago: true, installmentAmount: 10.0, installmentQuantity: 2, installmentRate: 0.0)
+            Product(id: "1", title: "Product 1", price: 10, thumbnail: nil, availableQuantity: 5, acceptsMercadoPago: true, installmentAmount: 5, installmentQuantity: 2, installmentRate: 0),
+            Product(id: "2", title: "Product 2", price: 20, thumbnail: nil, availableQuantity: 3, acceptsMercadoPago: true, installmentAmount: 10, installmentQuantity: 2, installmentRate: 0)
         ]
         
         searchViewController.searchBar.text = "test"

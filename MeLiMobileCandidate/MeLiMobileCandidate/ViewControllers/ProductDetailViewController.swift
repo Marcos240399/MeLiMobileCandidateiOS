@@ -10,10 +10,10 @@ import UIKit
 
 class ProductDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    private var product: Product
-    private var images: [UIImage] = []
+    internal var product: Product
+    internal var images: [UIImage] = []
     
-    private let titleLabel: UILabel = {
+    internal let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
@@ -21,8 +21,8 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         return label
     }()
     
-    private var carrouselView: UICollectionView!
-    private let pageControl: UIPageControl = {
+    internal var carrouselView: UICollectionView!
+    internal let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 3
         pageControl.currentPage = 0
@@ -46,21 +46,21 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         return view
     }()
     
-    private let littleWhiteRectangleView: UIView = {
+    private let titleLeadingBackgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private let priceLabel: UILabel = {
+    internal let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let mercadoPagoLabel: UILabel = {
+    internal let mercadoPagoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -68,21 +68,21 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         return label
     }()
     
-    private let mercadoPagoIcon: UIImageView = {
+    internal let mercadoPagoIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let stockLabel: UILabel = {
+    internal let stockLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let installmentsLabel: UILabel = {
+    internal let installmentsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -98,7 +98,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     private func setupViews() {
         view.backgroundColor = .MeLiYellow
         view.addSubview(titleLabel)
-        view.addSubview(littleWhiteRectangleView)
+        view.addSubview(titleLeadingBackgroundView)
         view.addSubview(spacerView)
         view.addSubview(backgroundView)
         view.addSubview(pageControl)
@@ -114,7 +114,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         titleLabel.numberOfLines = 0
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: littleWhiteRectangleView.trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: titleLeadingBackgroundView.trailingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
@@ -124,10 +124,10 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
                                      spacerView.heightAnchor.constraint(equalToConstant: 10)])
         
         
-        NSLayoutConstraint.activate([littleWhiteRectangleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-                                     littleWhiteRectangleView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                                     littleWhiteRectangleView.bottomAnchor.constraint(equalTo: spacerView.topAnchor),
-                                     littleWhiteRectangleView.widthAnchor.constraint(equalToConstant: 16)])
+        NSLayoutConstraint.activate([titleLeadingBackgroundView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                                     titleLeadingBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                                     titleLeadingBackgroundView.bottomAnchor.constraint(equalTo: spacerView.topAnchor),
+                                     titleLeadingBackgroundView.widthAnchor.constraint(equalToConstant: 16)])
         
         NSLayoutConstraint.activate([
             carrouselView.topAnchor.constraint(equalTo: spacerView.bottomAnchor),
@@ -192,23 +192,13 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     
     private func configureViewWithProduct() {
         titleLabel.text = product.title
-        priceLabel.text = String(format: "$%.2f", product.price)
-        if((priceLabel.text?.contains(where: { Character in
-            Character == "."
-        })) != nil){
-            let split = priceLabel.text!.components(separatedBy: ".")
-            if(split[1].allSatisfy({ Character in
-                Character == "0"
-            })){
-                priceLabel.text = split[0]
-            }
-        }
-        priceLabel.text = priceLabel.text!
+        priceLabel.text = "$" + RemoveTrailingZeroes(from: product.price)
         mercadoPagoLabel.text = "Disponible"
         mercadoPagoIcon.image = UIImage(named: "MercadoPagoIcon")
         stockLabel.text = String(product.availableQuantity) + " en stock"
-        let installmentAmountText = RemoveTrailingZeroes(from: product.installmentAmount)
-        installmentsLabel.text = "en " + String(product.installmentQuantity) + "x " + installmentAmountText
+        let installmentQuantityText = RemoveTrailingZeroes(from: product.installmentQuantity)
+        let installmentAmountText = "$" + RemoveTrailingZeroes(from: product.installmentAmount)
+        installmentsLabel.text = "en " + installmentQuantityText + "x " + installmentAmountText
         if product.installmentRate == 0 { installmentsLabel.text! += " sin intereses!" }
         installmentsLabel.textColor = .InstallmentGreen
         if product.acceptsMercadoPago == false{
@@ -249,7 +239,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func RemoveTrailingZeroes(from number: Double) -> String{
-        var stringifiedInput = String(format: "$%.2f", number)
+        var stringifiedInput = String(format: "%.2f", number)
         if((stringifiedInput.contains(where: { Character in
             Character == "."
         }))){

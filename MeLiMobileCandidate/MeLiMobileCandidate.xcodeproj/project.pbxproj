@@ -10,6 +10,7 @@
 		918A00D82C67CDAF00095268 /* ImageCarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */; };
 		918A00DF2C6AA42500095268 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00DE2C6AA42500095268 /* ProductTests.swift */; };
 		918A00E12C6AA9BD00095268 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */; };
+		918A00E32C6AAD3E00095268 /* ProductDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */; };
 		91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639D2C63BD560094A162 /* AppDelegate.swift */; };
 		91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639F2C63BD560094A162 /* SceneDelegate.swift */; };
 		91DC63A72C63BD570094A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A62C63BD570094A162 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarrouselCell.swift; sourceTree = "<group>"; };
 		918A00DE2C6AA42500095268 /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		91DC639A2C63BD560094A162 /* MeLiMobileCandidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeLiMobileCandidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DC639D2C63BD560094A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DC639F2C63BD560094A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				91DC63B42C63BD570094A162 /* NetworkManagerTests.swift */,
 				918A00DE2C6AA42500095268 /* ProductTests.swift */,
 				918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */,
+				918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */,
 			);
 			path = MeLiMobileCandidateTests;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				91DC63B52C63BD570094A162 /* NetworkManagerTests.swift in Sources */,
 				918A00DF2C6AA42500095268 /* ProductTests.swift in Sources */,
 				918A00E12C6AA9BD00095268 /* SearchViewControllerTests.swift in Sources */,
+				918A00E32C6AAD3E00095268 /* ProductDetailViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
