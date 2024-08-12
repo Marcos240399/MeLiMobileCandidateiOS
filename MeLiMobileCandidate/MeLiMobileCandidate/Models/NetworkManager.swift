@@ -7,7 +7,7 @@
 
 import Foundation
 class NetworkManager{
-    static let shared = NetworkManager(session: .shared)
+    static var shared = NetworkManager(session: .shared)
     private let session: URLSession
     
     init(session: URLSession) {

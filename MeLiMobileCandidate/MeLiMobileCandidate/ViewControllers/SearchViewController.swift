@@ -10,9 +10,9 @@ import UIKit
 
 class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    private let searchBar = UISearchBar()
-    private let tableView = UITableView()
-    private var products: [Product] = []
+    internal let searchBar = UISearchBar()
+    internal let tableView = UITableView()
+    internal var products: [Product] = []
     
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
@@ -79,7 +79,11 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         products = []
         tableView.reloadData()
-        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
+        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else {
+            self.showAlertMessage(title: "Busqueda incorrecta", message: "La busqueda no puede ser vacía")
+            print("BusquedaVacía")
+            return
+        }
         fetchData(for: searchTerm)
     }
     
@@ -92,7 +96,8 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
                 case .success(let products):
                     self?.products = products
                     if products.isEmpty {
-                        self?.showAlertMessage(title: "Busqueda incorrecta", message: "No se encontraron resultados para la busqueda")
+                        self?.showAlertMessage(title: "Error", message: "No se encontraron resultados para la busqueda")
+                        print("404: No se encontraron resultados para la busqueda")
                     }
                     self?.tableView.reloadData()
                 case .failure(let error):
