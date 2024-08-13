@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		918A00D82C67CDAF00095268 /* ImageCarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */; };
+		918A00DF2C6AA42500095268 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00DE2C6AA42500095268 /* ProductTests.swift */; };
+		918A00E12C6AA9BD00095268 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */; };
+		918A00E32C6AAD3E00095268 /* ProductDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */; };
+		918A00E52C6AB36E00095268 /* ProductTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E42C6AB36E00095268 /* ProductTableViewCellTests.swift */; };
+		918A00E72C6AB3BF00095268 /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A00E62C6AB3BF00095268 /* MathUtils.swift */; };
 		91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639D2C63BD560094A162 /* AppDelegate.swift */; };
 		91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC639F2C63BD560094A162 /* SceneDelegate.swift */; };
-		91DC63A22C63BD560094A162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63A12C63BD560094A162 /* ViewController.swift */; };
-		91DC63A52C63BD560094A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A32C63BD560094A162 /* Main.storyboard */; };
 		91DC63A72C63BD570094A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A62C63BD570094A162 /* Assets.xcassets */; };
 		91DC63AA2C63BD570094A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */; };
-		91DC63B52C63BD570094A162 /* MeLiMobileCandidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63B42C63BD570094A162 /* MeLiMobileCandidateTests.swift */; };
+		91DC63B52C63BD570094A162 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63B42C63BD570094A162 /* NetworkManagerTests.swift */; };
 		91DC63BF2C63BD570094A162 /* MeLiMobileCandidateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63BE2C63BD570094A162 /* MeLiMobileCandidateUITests.swift */; };
 		91DC63C12C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */; };
+		91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D42C63C1620094A162 /* SearchViewController.swift */; };
+		91DC63D72C63C6F10094A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DC63D62C63C6F10094A162 /* Main.storyboard */; };
+		91DC63D92C63E4700094A162 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63D82C63E4700094A162 /* Product.swift */; };
+		91DC63DB2C63E7160094A162 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63DA2C63E7160094A162 /* NetworkManager.swift */; };
+		91DC63DE2C64FEEC0094A162 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63DD2C64FEEC0094A162 /* ProductTableViewCell.swift */; };
+		91DC63E12C6504EE0094A162 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63E02C6504EE0094A162 /* CustomColors.swift */; };
+		91DC63E32C6516040094A162 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC63E22C6516040094A162 /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +47,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarrouselCell.swift; sourceTree = "<group>"; };
+		918A00DE2C6AA42500095268 /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
+		918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		918A00E42C6AB36E00095268 /* ProductTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCellTests.swift; sourceTree = "<group>"; };
+		918A00E62C6AB3BF00095268 /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
 		91DC639A2C63BD560094A162 /* MeLiMobileCandidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeLiMobileCandidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DC639D2C63BD560094A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DC639F2C63BD560094A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91DC63A12C63BD560094A162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91DC63A42C63BD560094A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DC63A62C63BD570094A162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DC63A92C63BD570094A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91DC63AB2C63BD570094A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91DC63B02C63BD570094A162 /* MeLiMobileCandidateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeLiMobileCandidateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91DC63B42C63BD570094A162 /* MeLiMobileCandidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateTests.swift; sourceTree = "<group>"; };
+		91DC63B42C63BD570094A162 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		91DC63BA2C63BD570094A162 /* MeLiMobileCandidateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeLiMobileCandidateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DC63BE2C63BD570094A162 /* MeLiMobileCandidateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateUITests.swift; sourceTree = "<group>"; };
 		91DC63C02C63BD570094A162 /* MeLiMobileCandidateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeLiMobileCandidateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91DC63D42C63C1620094A162 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		91DC63D62C63C6F10094A162 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		91DC63D82C63E4700094A162 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		91DC63DA2C63E7160094A162 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = MeLiMobileCandidate/Models/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		91DC63DD2C64FEEC0094A162 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		91DC63E02C6504EE0094A162 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		91DC63E22C6516040094A162 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +121,14 @@
 		91DC639C2C63BD560094A162 /* MeLiMobileCandidate */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63DF2C6504E00094A162 /* Utils */,
 				91DC63D02C63C02A0094A162 /* Services */,
 				91DC63CF2C63C01A0094A162 /* ViewControllers */,
 				91DC63CE2C63C0120094A162 /* Views */,
 				91DC63CD2C63C00B0094A162 /* Models */,
 				91DC639D2C63BD560094A162 /* AppDelegate.swift */,
 				91DC639F2C63BD560094A162 /* SceneDelegate.swift */,
-				91DC63A12C63BD560094A162 /* ViewController.swift */,
-				91DC63A32C63BD560094A162 /* Main.storyboard */,
+				91DC63D62C63C6F10094A162 /* Main.storyboard */,
 				91DC63A62C63BD570094A162 /* Assets.xcassets */,
 				91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */,
 				91DC63AB2C63BD570094A162 /* Info.plist */,
@@ -117,7 +139,11 @@
 		91DC63B32C63BD570094A162 /* MeLiMobileCandidateTests */ = {
 			isa = PBXGroup;
 			children = (
-				91DC63B42C63BD570094A162 /* MeLiMobileCandidateTests.swift */,
+				91DC63B42C63BD570094A162 /* NetworkManagerTests.swift */,
+				918A00DE2C6AA42500095268 /* ProductTests.swift */,
+				918A00E02C6AA9BD00095268 /* SearchViewControllerTests.swift */,
+				918A00E22C6AAD3E00095268 /* ProductDetailViewControllerTests.swift */,
+				918A00E42C6AB36E00095268 /* ProductTableViewCellTests.swift */,
 			);
 			path = MeLiMobileCandidateTests;
 			sourceTree = "<group>";
@@ -134,6 +160,7 @@
 		91DC63CD2C63C00B0094A162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63D82C63E4700094A162 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +168,7 @@
 		91DC63CE2C63C0120094A162 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63DC2C64FEC50094A162 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +176,8 @@
 		91DC63CF2C63C01A0094A162 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63D42C63C1620094A162 /* SearchViewController.swift */,
+				91DC63E22C6516040094A162 /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,8 +185,27 @@
 		91DC63D02C63C02A0094A162 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				91DC63DA2C63E7160094A162 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		91DC63DC2C64FEC50094A162 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				91DC63DD2C64FEEC0094A162 /* ProductTableViewCell.swift */,
+				918A00D72C67CDAF00095268 /* ImageCarrouselCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		91DC63DF2C6504E00094A162 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91DC63E02C6504EE0094A162 /* CustomColors.swift */,
+				918A00E62C6AB3BF00095268 /* MathUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DC63D72C63C6F10094A162 /* Main.storyboard in Resources */,
 				91DC63AA2C63BD570094A162 /* LaunchScreen.storyboard in Resources */,
 				91DC63A72C63BD570094A162 /* Assets.xcassets in Resources */,
-				91DC63A52C63BD560094A162 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DC63A22C63BD560094A162 /* ViewController.swift in Sources */,
+				91DC63DB2C63E7160094A162 /* NetworkManager.swift in Sources */,
+				91DC63E32C6516040094A162 /* ProductDetailViewController.swift in Sources */,
 				91DC639E2C63BD560094A162 /* AppDelegate.swift in Sources */,
+				91DC63D92C63E4700094A162 /* Product.swift in Sources */,
+				91DC63D52C63C1620094A162 /* SearchViewController.swift in Sources */,
 				91DC63A02C63BD560094A162 /* SceneDelegate.swift in Sources */,
+				918A00E72C6AB3BF00095268 /* MathUtils.swift in Sources */,
+				91DC63DE2C64FEEC0094A162 /* ProductTableViewCell.swift in Sources */,
+				918A00D82C67CDAF00095268 /* ImageCarrouselCell.swift in Sources */,
+				91DC63E12C6504EE0094A162 /* CustomColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DC63B52C63BD570094A162 /* MeLiMobileCandidateTests.swift in Sources */,
+				91DC63B52C63BD570094A162 /* NetworkManagerTests.swift in Sources */,
+				918A00E52C6AB36E00095268 /* ProductTableViewCellTests.swift in Sources */,
+				918A00DF2C6AA42500095268 /* ProductTests.swift in Sources */,
+				918A00E12C6AA9BD00095268 /* SearchViewControllerTests.swift in Sources */,
+				918A00E32C6AAD3E00095268 /* ProductDetailViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,14 +389,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91DC63A32C63BD560094A162 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91DC63A42C63BD560094A162 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91DC63A82C63BD570094A162 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
