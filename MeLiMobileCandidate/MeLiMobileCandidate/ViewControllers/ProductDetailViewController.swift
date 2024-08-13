@@ -163,11 +163,11 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
         ])
         
         NSLayoutConstraint.activate([
-            stockLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20),
+            stockLabel.topAnchor.constraint(equalTo: installmentsLabel.bottomAnchor, constant: 20),
             stockLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stockLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            installmentsLabel.topAnchor.constraint(equalTo: stockLabel.bottomAnchor, constant: 8),
+            installmentsLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 8),
             installmentsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             installmentsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
