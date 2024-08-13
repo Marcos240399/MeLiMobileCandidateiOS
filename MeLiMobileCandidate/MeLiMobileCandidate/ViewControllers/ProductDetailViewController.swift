@@ -219,9 +219,9 @@ class ProductDetailViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard scrollView.frame.width > 0 else { return }
         let pageIndex = round(scrollView.contentOffset.x / scrollView.frame.width)
         pageControl.currentPage = Int(pageIndex)
-        
     }
     
     init(product: Product) {
