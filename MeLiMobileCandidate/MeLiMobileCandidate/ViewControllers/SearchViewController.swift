@@ -14,6 +14,14 @@ class SearchViewController : UIViewController, UISearchBarDelegate, UITableViewD
     internal let tableView = UITableView()
     internal var products: [Product] = []
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .allButUpsideDown
+    }
+    
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.color = .blue
